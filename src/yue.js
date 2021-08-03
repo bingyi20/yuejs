@@ -2,6 +2,7 @@
 import Observer from "./observer/observer"
 import Watcher from "./observer/watcher"
 import Compiler from "./compiler"
+import nextTick from "./scheduler/nextTick"
 
 class Yue {
     constructor(options) {
@@ -16,6 +17,9 @@ class Yue {
         // 挂载方法
         this.$methods = options.methods
 
+        // 挂载nextTick方法
+        this.$nextTick = nextTick
+
         this._initRootEl(options.el)
 
         // 代理数据
@@ -26,6 +30,7 @@ class Yue {
 
         // 挂载数据到外部可见
         // this.$data = options.data
+
 
         // 挂载el
         if(this.$el) {

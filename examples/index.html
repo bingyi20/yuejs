@@ -15,15 +15,21 @@
         </h1>
         {{name}} say: {{ message }}
         <p>
-            <button y-on:click="sayHello">你点我试试</button>
             <a id="baidu" y-bind:href="baidu">百度</a>
+        </p>
+        <p>
+            <button y-on:click="sayHello">你点我试试</button>
+        </p>
+        <p>
+            <button y-on:click="updateUI">更新UI</button>
         </p>
     </div>
     
     <script>
         const app = document.getElementById("app")
+        let ID = 0
         var ym = new Yue({
-            el: app,
+            // el: app,
             data: {
                 name: "bangyu",
                 message: "My name is bangyu",
@@ -32,9 +38,18 @@
             methods: {
                 sayHello() {
                     alert("Hello, i am a method.")
+                },
+                updateUI() {
+                    this.name = "Li qin"
+                    this.message = `I will love yi ${++ID} times`
+                    console.log("do something")
+                    this.$nextTick(() => {
+                        console.log("I am a nextTick event.")
+                    })
                 }
             }
         })
+        ym.$mount(app)
         console.log(ym)
     </script>
 </body>

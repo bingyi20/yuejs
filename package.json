@@ -2,7 +2,7 @@
   "name": "yuejs",
   "version": "1.0.0",
   "description": "yuejs is a library for building interactive web interfaces.",
-  "main": "src/yue.js",
+  "main": "dist/yue.js",
   "scripts": {
     "dev": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
