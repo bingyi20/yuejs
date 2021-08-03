@@ -3,6 +3,7 @@ Yue (pronounced /yjuː/) is a progressive framework for building user interfaces
 
 
 ## 目录结构
+```
 |-- code',
   '    |-- .gitignore',             
   '    |-- package-lock.json',
@@ -25,6 +26,7 @@ Yue (pronounced /yjuː/) is a progressive framework for building user interfaces
   '            |-- index.js',
   '            |-- nextTick.js',
   '
+```
 
 ## 用法
 ```
