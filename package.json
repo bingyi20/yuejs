@@ -1,0 +1,23 @@
+{
+  "name": "yuejs",
+  "version": "1.0.0",
+  "description": "yuejs is a library for building interactive web interfaces.",
+  "main": "src/yue.js",
+  "scripts": {
+    "dev": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bangyu",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.9",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "webpack": "^5.48.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "babel-loader": "^8.2.2"
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yue.js</title>
+    <script src="../dist/yue.js"></script>
+</head>
+<body>
+
+    <div id="app" v-on:click="sayHello">
+        <h1>
+            hello world
+        </h1>
+        {{name}} say: {{ message }}
+        <p>
+            <button y-on:click="sayHello">你点我试试</button>
+            <a id="baidu" y-bind:href="baidu">百度</a>
+        </p>
+    </div>
+    
+    <script>
+        const app = document.getElementById("app")
+        var ym = new Yue({
+            el: app,
+            data: {
+                name: "bangyu",
+                message: "My name is bangyu",
+                baidu: "http://www.baidu.com"
+            },
+            methods: {
+                sayHello() {
+                    alert("Hello, i am a method.")
+                }
+            }
+        })
+        console.log(ym)
+    </script>
+</body>
+</html>
